@@ -6,12 +6,18 @@
 
 <b>Critério de avaliação</b>:
 - Ao menos um endpoint a ser consumido pelo app.
+  - Criar a estrutura do projeto
+  - Implementar a chamada do endpoint na camada controller
+  - Implementar a regra na camada service
+  - Implementar as chamadas no banco de dados na camada repository
+  - Mapear as classes de entidade do banco de dados
+  - Criar as classes DTO, request e response para transitar as informações entre o front e back
 - Testes unitários das camadas controller e service.
-- Usar o seguinte padrão para configurar o arquivo README.md (https://github.com/othneildrew/Best-README-Template).
+- Usar o seguinte padrão para configurar o arquivo README.md (https://github.com/othneildrew/Best-README-Template e https://readme.so/editor).
 - Conexão com banco de dados (podendo ser via uma conexão local ou conectando com um banco de dados na nuvem do IBM Cloud).
 - Commitar o script de criação do banco de dados junto com o código no github
-- Documentar os endpoints no swagger
-- Criar um collection do postman, com os endpoints criados.
+- Documentar os endpoints no swagger (https://swagger.io/)
+- Criar um collection do postman, com os endpoints criados (commitar a collection junto do script do banco no código).
 
 <b>Entrega</b>:
 - O código deve ser entregue através de um fork deste respositório
