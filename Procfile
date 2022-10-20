@@ -1,1 +1,1 @@
-web: java -jar build/libs/welcomeboard-0.0.1-SNAPSHOT.jar
+web: java -jar build/libs/welcomeboardd-0.0.1-SNAPSHOT.jar
