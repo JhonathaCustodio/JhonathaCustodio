@@ -26,4 +26,9 @@ public class WelcomeBoardController {
     public ResponseEntity<List<WelcomeBoardDto>> findAll(){
         return ResponseEntity.ok(this.service.findAll());
     }
+
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<WelcomeBoardDto> findById(@PathVariable Long id){
+        return ResponseEntity.ok(this.service.findById(id));
+    }
 }

@@ -28,4 +28,8 @@ public class WelcomeBoardService {
         return repository.findAll().stream().map(e -> WelcomeBoardConverter.toDto(Optional.ofNullable(e))).collect(Collectors.toList());
     }
 
+    public WelcomeBoardDto findById(Long id) {
+        return WelcomeBoardConverter.toDto(repository.findById(id));
+    }
+
 }
