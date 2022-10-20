@@ -31,4 +31,10 @@ public class WelcomeBoardController {
     public ResponseEntity<WelcomeBoardDto> findById(@PathVariable Long id){
         return ResponseEntity.ok(this.service.findById(id));
     }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<WelcomeBoardDto> update(@PathVariable Long id, @RequestBody WelcomeBoardDto welcomeBoardDto){
+        welcomeBoardDto = service.update(id, welcomeBoardDto);
+        return ResponseEntity.ok().body(welcomeBoardDto);
+    }
 }

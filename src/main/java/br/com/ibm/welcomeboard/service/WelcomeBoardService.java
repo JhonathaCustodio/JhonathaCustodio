@@ -32,4 +32,16 @@ public class WelcomeBoardService {
         return WelcomeBoardConverter.toDto(repository.findById(id));
     }
 
+    public WelcomeBoardDto update(Long id, WelcomeBoardDto welcomeBoardDto) {
+        WelcomeBoardEntity welcomeBoardEntity = WelcomeBoardConverter.toEntity(Optional.of(welcomeBoardDto));
+        WelcomeBoardEntity entity = repository.getReferenceById(id);
+        updateData(entity, welcomeBoardEntity);
+        return WelcomeBoardConverter.toDto(Optional.ofNullable(repository.save(entity)));
+    }
+
+    private void updateData(WelcomeBoardEntity entity, WelcomeBoardEntity user) {
+        entity.setName(user.getName());
+        entity.setEmail(user.getEmail());
+    }
+
 }
