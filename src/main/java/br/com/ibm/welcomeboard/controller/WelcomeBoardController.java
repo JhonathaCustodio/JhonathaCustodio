@@ -37,4 +37,10 @@ public class WelcomeBoardController {
         welcomeBoardDto = service.update(id, welcomeBoardDto);
         return ResponseEntity.ok().body(welcomeBoardDto);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Long id){
+        service.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

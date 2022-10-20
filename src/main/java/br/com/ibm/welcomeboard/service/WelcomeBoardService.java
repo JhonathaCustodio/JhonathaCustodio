@@ -44,4 +44,7 @@ public class WelcomeBoardService {
         entity.setEmail(user.getEmail());
     }
 
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
 }
